@@ -41,6 +41,36 @@ function restmdoneit_scripts() {
 function restmdoneit_demo_options_page() {
 
     if ( isset( $_POST['restmdoneit_install_demo_data'] ) ) {
+        $demo_widgets = get_option( 'sidebars_widgets' );
+        $demo_widgets['text-block'] = array( 'text-2' );
+        $demo_widgets['image-block'] = array( 'text-3' );
+        $demo_widgets['contact'] = array( 'text-4' );
+        $demo_widgets['cf7'] = array( 'text-5' );
+        $demo_widgets['footer'] = array( 'text-6' );
+        update_option( 'sidebars_widgets', $demo_widgets );
+
+        $wid_text	= get_option( 'widget_text' );
+        $wid_text[2] = array(
+            'title'      => 'test-title2',
+            'text'		 => 'test-text2'
+        );
+        $wid_text[3] = array(
+            'title'      => 'test-title3',
+            'text'		 => 'test-text3'
+        );
+        $wid_text[4] = array(
+            'title'      => 'contact',
+            'text'		 => 'test-text4'
+        );
+        $wid_text[5] = array(
+            'title'      => '',
+            'text'		 => '[contact-form-7 id="5" title="Contact form 1"]'
+        );
+        $wid_text[6] = array(
+            'title'      => '',
+            'text'		 => '© Copyright <strong>Mindblister</strong> 2021'
+        );
+        update_option( 'widget_text', $wid_text );
 
     }
 

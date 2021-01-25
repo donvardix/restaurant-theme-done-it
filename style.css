@@ -122,6 +122,45 @@ header {
     margin-left: auto;
     margin-right: auto;
 }
+.restmdoneit_contact_plugin {
+    padding: 80px;
+}
+.wpcf7-form {
+    position: relative;
+}
+.wpcf7_line {
+    float: left;
+    width: 33%;
+    position: inherit;
+}
+.wpcf7_line input {
+    height: 60px;
+}
+.wpcf7_fields input,
+.restmdoneit_message textarea {
+    padding-left: 18px;
+    padding-right: 28px;
+    font-size: 14px;
+    width: 100%;
+    border: unset;
+    background: #E5E5E5;
+    border-radius: 5px;
+}
+.restmdoneit_message textarea {
+    margin-top: 10px;
+}
+.wpcf7_email {
+    margin: 0 6px;
+}
+.wpcf7_submit input {
+    float: right;
+    max-width: 630px;
+    width: 100%;
+    border: unset;
+    border-radius: 5px;
+    background-color: #e8c300;
+    height: 60px;
+}
 
 
 @media (min-width: 1500px) {
