@@ -51,16 +51,16 @@ function restmdoneit_demo_options_page() {
 
         $wid_text	= get_option( 'widget_text' );
         $wid_text[2] = array(
-            'title'      => 'test-title2',
-            'text'		 => 'test-text2'
+            'title'      => 'about us',
+            'text'		 => '<strong>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis at velit maximus, molestie est a, tempor magna.</strong><br /><br />Integer ullamcorper neque eu purus euismod, ac faucibus mauris posuere. Morbi non ultrices ligula. Sed dictum, enim sed ullamcorper feugiat, dui odio vehicula eros, a sollicitudin lorem quam nec sem. Mauris tincidunt feugiat diam convallis pharetra. Nulla facilisis semper laoreet.'
         );
         $wid_text[3] = array(
-            'title'      => 'test-title3',
-            'text'		 => 'test-text3'
+            'title'      => '',
+            'text'		 => '<img class="alignnone wp-image-8 size-full" src="' . get_template_directory_uri() . '/demo-data/images/about-img.png" alt="" width="475" height="475" />'
         );
         $wid_text[4] = array(
-            'title'      => 'contact',
-            'text'		 => 'test-text4'
+            'title'      => 'CONTACT',
+            'text'		 => '<strong>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis at velit maximus, molestie est a, tempor magna.</strong>'
         );
         $wid_text[5] = array(
             'title'      => '',
@@ -88,6 +88,7 @@ function restmdoneit_settings_page() {
 }
 
 function register_my_widgets() {
+    register_sidebar( array( 'name' => 'Multilingual', 'id' => 'multilingual' ) );
     register_sidebar( array( 'name' => 'Text', 'id' => 'text-block' ) );
     register_sidebar( array( 'name' => 'Image', 'id' => 'image-block' ) );
     register_sidebar( array( 'name' => 'Contact', 'id' => 'contact' ) );
@@ -96,7 +97,6 @@ function register_my_widgets() {
 }
 
 add_action( 'widgets_init', 'register_my_widgets' );
-
 add_action( 'admin_menu', 'restmdoneit_add_admin_menu' );
 add_action( 'after_setup_theme', 'restmdoneit_setup' );
 add_action( 'wp_enqueue_scripts', 'restmdoneit_scripts' );

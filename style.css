@@ -69,7 +69,8 @@ header {
     color: #fff;
 }
 .restmdoneit_about_us {
-    padding: 100px 80px 80px 80px;
+    padding: 100px 80px 0 80px;
+    margin-bottom: 80px;
 }
 .restmdoneit_text_block {
     padding-right: 40px;
@@ -96,7 +97,6 @@ header {
     border-bottom: 5px solid #e8c300
 }
 .restmdoneit_image_block {
-    padding-left: 40px;
     border-radius: 5px;
 }
 .restmdoneit_image_block img {
@@ -118,7 +118,7 @@ header {
     text-align: center;
 }
 .restmdoneit_contact_text .textwidget {
-    width: 565px;
+    max-width: 565px;
     margin-left: auto;
     margin-right: auto;
 }
@@ -148,6 +148,7 @@ header {
 }
 .restmdoneit_message textarea {
     margin-top: 10px;
+    padding-top: 18px;
 }
 .wpcf7_email {
     margin: 0 6px;
@@ -160,12 +161,36 @@ header {
     border-radius: 5px;
     background-color: #e8c300;
     height: 60px;
+    font-size: 12px;
+    color: #FFFFFF;
+    font-weight: bold;
+}
+.restmdoneit_multilingual {
+    text-align: center;
+}
+.restmdoneit_multilingual ul {
+    padding: 0;
+}
+.restmdoneit_multilingual a {
+    border: 1px solid white;
+    padding: 9px;
+    border-radius: 50px;
+    color: white;
+    text-decoration: none;
 }
 
 
 @media (min-width: 1500px) {
     .container {
         max-width: 1440px;
+    }
+}
+@media (max-width: 1500px) {
+    .wpcf7_line {
+        max-width: 350px;
+        width: 100%;
+        float: unset;
+        margin: 6px 0;
     }
 }
 @media (max-width: 950px) {
@@ -179,7 +204,8 @@ header {
         margin-left: auto;
         margin-right: auto;
     }
-    .restmdoneit_about_us {
+    .restmdoneit_about_us,
+    .restmdoneit_contact_plugin {
          padding: 0;
     }
 }

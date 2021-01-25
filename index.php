@@ -10,6 +10,9 @@
         <h1>hungry people</h1>
         <hr />
     </div>
+    <div class="restmdoneit_multilingual">
+	    <?php dynamic_sidebar( 'multilingual' ); ?>
+    </div>
     <div class="restmdoneit_down_btn">
         <i class="bi bi-arrow-down-circle-fill" style="font-size: 40px;"></i>
     </div>
