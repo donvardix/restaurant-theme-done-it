@@ -34,7 +34,7 @@ function restmdoneit_setup() {
 
 function restmdoneit_scripts() {
     wp_enqueue_style( 'bootstrap', get_template_directory_uri() . '/css/bootstrap.min.css' );
-    wp_enqueue_style( 'bootstrap', get_template_directory_uri() . '/css/bootstrap.min.css' );
+    wp_enqueue_style( 'font-awesome', 'https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css' );
     wp_enqueue_style( 'restmdoneit-style', get_stylesheet_uri() );
 }
 
@@ -72,9 +72,7 @@ function restmdoneit_demo_options_page() {
         );
         update_option( 'widget_text', $wid_text );
 
-    }
-
-    ?>
+    } ?>
     <div class="wrap">
         <h1><?php _e( 'Install Demo Data', 'restaurant-theme' ); ?></h1>
     </div>
@@ -87,7 +85,7 @@ function restmdoneit_settings_page() {
     echo 'settings';
 }
 
-function register_my_widgets() {
+function restmdoneit_widgets() {
     register_sidebar( array( 'name' => 'Multilingual', 'id' => 'multilingual' ) );
     register_sidebar( array( 'name' => 'Text', 'id' => 'text-block' ) );
     register_sidebar( array( 'name' => 'Image', 'id' => 'image-block' ) );
@@ -96,7 +94,7 @@ function register_my_widgets() {
     register_sidebar( array( 'name' => 'Footer', 'id' => 'footer' ) );
 }
 
-add_action( 'widgets_init', 'register_my_widgets' );
+add_action( 'widgets_init', 'restmdoneit_widgets' );
 add_action( 'admin_menu', 'restmdoneit_add_admin_menu' );
 add_action( 'after_setup_theme', 'restmdoneit_setup' );
 add_action( 'wp_enqueue_scripts', 'restmdoneit_scripts' );

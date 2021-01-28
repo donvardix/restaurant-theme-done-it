@@ -1,7 +1,6 @@
 <?php get_header(); ?>
 
-
-<header>
+<header class="restmdoneit_header">
     <div class="restmdoneit_logo">
         <img src="<?php echo get_site_url(); ?>/wp-content/themes/restaurant-theme-done-it/demo-data/images/logo.png" alt="logo" />
     </div>
@@ -11,7 +10,7 @@
         <hr />
     </div>
     <div class="restmdoneit_multilingual">
-	    <?php dynamic_sidebar( 'multilingual' ); ?>
+        <?php dynamic_sidebar( 'multilingual' ); ?>
     </div>
     <div class="restmdoneit_down_btn">
         <i class="bi bi-arrow-down-circle-fill" style="font-size: 40px;"></i>
@@ -38,6 +37,5 @@
 <footer class="restmdoneit_footer">
     <?php dynamic_sidebar( 'footer' ); ?>
 </footer>
-
 
 <?php get_footer(); ?>
